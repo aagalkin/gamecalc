@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>nura calc</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="menu">
+    <select id="class_selector">
+        <option disabled selected>Выберите класс</option>
+        <option value="ranger">Лучник</option>
+        <option value="barbarian">Варвар</option>
+        <option value="shieldmaster">Мастер щита</option>
+        <option value="juggernaut">Джагернаут</option>
+        <option value="priest">Жрец</option>
+        <option value="mage">Маг</option>
+    </select>
+
+    <select id="maket_lvl_selector">
+        <option disabled selected>Выберите уровень</option>
+    </select>
+
+    <select id="lvl_selector" class="hidden">
+        <option disabled selected>Выберите уровень</option>
+        <option value="8">8 уровень</option>
+        <option value="11">11 уровень</option>
+        <option value="14">14 уровень</option>
+        <option value="17">17 уровень</option>
+        <option value="20">20 уровень</option>
+        <option value="23">23 уровень</option>
+    </select>
+
+    <div class="points">Свободные очки: <span id="points"></span></div>
+    <button id="clean_lvl" class="bold">Очистить умения</button>
+    <button id="get_build" class="bold">Получить ссылку</button>
+</div>
+<div id="loading-spinner" class="hidden">
+    <div id="circularG_1" class="circularG"></div>
+    <div id="circularG_2" class="circularG"></div>
+    <div id="circularG_3" class="circularG"></div>
+    <div id="circularG_4" class="circularG"></div>
+    <div id="circularG_5" class="circularG"></div>
+    <div id="circularG_6" class="circularG"></div>
+    <div id="circularG_7" class="circularG"></div>
+    <div id="circularG_8" class="circularG"></div>
+</div>
+<div id="masterytree">
+    <div id="bg" class="hidden"></div>
+    <div id="base" class="slot"></div>
+    <div id="base_lvl" class="lvl_slot"></div>
+
+    <div id="left_base" class="slot"></div>
+    <div id="left_base_lvl" class="lvl_slot"></div>
+    <div id="left1" class="slot"></div>
+    <div id="left1_lvl" class="lvl_slot"></div>
+    <div id="left2" class="slot"></div>
+    <div id="left2_lvl" class="lvl_slot"></div>
+    <div id="left3" class="slot"></div>
+    <div id="left3_lvl" class="lvl_slot"></div>
+    <div id="left4" class="slot"></div>
+    <div id="left4_lvl" class="lvl_slot"></div>
+    <div id="left5" class="slot"></div>
+    <div id="left5_lvl" class="lvl_slot"></div>
+    <div id="left6" class="slot"></div>
+    <div id="left6_lvl" class="lvl_slot"></div>
+
+    <div id="right_base" class="slot"></div>
+    <div id="right_base_lvl" class="lvl_slot"></div>
+    <div id="right1" class="slot"></div>
+    <div id="right1_lvl" class="lvl_slot"></div>
+    <div id="right2" class="slot"></div>
+    <div id="right2_lvl" class="lvl_slot"></div>
+    <div id="right3" class="slot"></div>
+    <div id="right3_lvl" class="lvl_slot"></div>
+    <div id="right4" class="slot"></div>
+    <div id="right4_lvl" class="lvl_slot"></div>
+    <div id="right5" class="slot"></div>
+    <div id="right5_lvl" class="lvl_slot"></div>
+    <div id="right6" class="slot"></div>
+    <div id="right6_lvl" class="lvl_slot"></div>
+</div>
+<div id="skill_details">
+    <div id="skill_type"></div>
+    <br>
+    <div id="skill_desc"></div>
+    <br>
+    <div id="skill_cost"></div>
+    <div id="skill_reload"></div>
+    <div id="skill_duration"></div>
+</div>
+<div id="link" class="hidden"></div>
+
+<script src="/js/main.js"></script>
+<script src="/js/build.js"></script>
+</body>
+</html>
